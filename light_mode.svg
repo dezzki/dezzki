@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 440" width="100%" height="100%">
-  <style>
-    .bg { fill: #0d1117; rx: 8px; }
-    .term-window { fill: #161b22; rx: 6px; }
-    .text-base { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; fill: #c9d1d9; line-height: 1.5; }
-    .user { fill: #58a6ff; font-weight: bold; }
-    .accent { fill: #ff7b72; }
-    .dim { fill: #8b949e; }
-    .highlight { fill: #79c0ff; }
+<style>
+    .bg { fill: #ffffff; rx: 8px; }
+    .term-window { fill: #f6f8fa; rx: 6px; }
+    .text-base { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13px; fill: #24292f; line-height: 1.5; }
+    .user { fill: #0550ae; font-weight: bold; }
+    .accent { fill: #cf222e; }
+    .dim { fill: #57606a; }
+    .highlight { fill: #0969da; }
   </style>
 
   <!-- Background Canvas -->
@@ -64,4 +63,3 @@
     <text x="0" y="243"><tspan class="accent">GitHub:</tspan><tspan class="dim"> .........................</tspan> github.com/yourusername</text>
   </g>
 </svg>
-
