@@ -22,7 +22,7 @@ opportunities to apply technical knowledge, contribute to real-world projects.
 
 - ⚡ **Learning:** Deepening my knowledge of Object-Oriented Programming (OOP) and algorithmic problem-solving.
 - 🕹️ **Fun Fact:** When I'm not coding, I'm probably optimizing my terminal environment or learning chess. 
-
+- I'm building and maintaining [0-to-projects](https://github.com/dedzzki/0-to-projects) a step-by-step repository of beginner-friendly projects for anyone starting out with programming and automation. Check it out and feel free to contribute
 ---
 
 ### 📈 GitHub Analytics
