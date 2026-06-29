@@ -26,17 +26,6 @@ opportunities to apply technical knowledge, contribute to real-world projects.
 - I'm building and maintaining [0-to-projects](https://github.com/dezzki/0-to-projects) a step-by-step repository of beginner-friendly projects for anyone starting out with programming and automation. Check it out and feel free to contribute
 ---
 
-### 📈 GitHub Analytics
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=dezzki&show_icons=true&theme=radical&hide_border=true" alt="corpxe stats" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dezzki&layout=compact&theme=radical&hide_border=true" alt="Top Languages" height="180" />
-</p>
-
----
-### 🤝 Connect with Me
-
-- 💬 Ask me about: Python scripts, Linux configurations, or basic hardware projects.
 - 📫 Drop a message or follow my journey here:
 
 [![X](https://img.shields.io/badge/X.com-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://x.com/dezzki_builds)
