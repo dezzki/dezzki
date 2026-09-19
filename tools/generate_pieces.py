@@ -154,6 +154,20 @@ def square_svg(color):
     return svg_wrap('<rect width="16" height="16" fill="{}"/>'.format(color))
 
 
+def start_game_svg():
+    w, h = 400, 80
+    rx = 18
+    parts = []
+    parts.append('<rect x="3" y="3" width="{}" height="{}" rx="{}" fill="{}"/>'.format(w - 6, h - 6, rx, OUTLINE))
+    parts.append('<rect x="7" y="7" width="{}" height="{}" rx="{}" fill="{}"/>'.format(w - 14, h - 14, rx - 4, DARK_SQUARE))
+    parts.append('<rect x="7" y="7" width="{}" height="{}" rx="{}" fill="none" stroke="{}" stroke-width="3"/>'.format(w - 14, h - 14, rx - 4, BLACK_FILL))
+    parts.append('<text x="{}" y="{}" text-anchor="middle" dominant-baseline="central" '
+                 'font-family="monospace" font-size="30" font-weight="bold" fill="{}" '
+                 'letter-spacing="3" shape-rendering="auto">&#9823; START NEW GAME</text>'.format(w // 2, h // 2, BLACK_FILL))
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}" '
+            'shape-rendering="crispEdges">'.format(w, h) + ''.join(parts) + '</svg>')
+
+
 def piece_svg(grid, fill, square_color):
     filled = filled_cells(grid)
     outline = outline_cells(filled)
@@ -177,6 +191,7 @@ def main():
 
     write(os.path.join(root, "light.svg"), square_svg(LIGHT_SQUARE))
     write(os.path.join(root, "dark.svg"), square_svg(DARK_SQUARE))
+    write(os.path.join(root, "start-game.svg"), start_game_svg())
 
     for piece, grid in PIECES.items():
         for side, fill in (("white", WHITE_FILL), ("black", BLACK_FILL)):
