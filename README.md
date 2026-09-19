@@ -6,7 +6,7 @@ This is an open chess tournament where ANYONE can play. That's the fun part.
 It's your turn to play! Move a <!-- BEGIN TURN -->?<!-- END TURN --> piece.
 
 <!-- BEGIN CHESS BOARD -->
-[![Start New Game](img/start-game.svg)](https://github.com/dezzki/dezzki/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Start+new+game)
+**[♟ Start New Game](https://github.com/dezzki/dezzki/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Start+new+game)**
 <!-- END CHESS BOARD -->
 
 **It's your turn to move! Choose one from the following table**

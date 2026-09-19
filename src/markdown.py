@@ -28,7 +28,7 @@ def new_game_issue_link():
         params=urlencode(settings['issues']['new_game']))
 
 def start_game_button():
-    return '\n[![Start New Game](img/start-game.svg)](' + new_game_issue_link() + ')\n'
+    return '\n**[♟ Start New Game](' + new_game_issue_link() + ')**\n'
 
 def generate_top_moves():
     with open("data/top_moves.txt", 'r') as file:
