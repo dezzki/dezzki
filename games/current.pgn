@@ -1,4 +1,4 @@
-[Event "dezzki's Online Open Chess Tournament"]
+[Event "@dezzki's Online Open Chess Tournament"]
 [Site "https://github.com/dezzki/dezzki"]
 [Date "2026.09.19"]
 [Round "1"]
@@ -6,4 +6,5 @@
 [Black "?"]
 [Result "*"]
 
-*
+1. e4 { @dezzki } *
+
