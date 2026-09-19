@@ -155,15 +155,15 @@ def square_svg(color):
 
 
 def start_game_svg():
-    w, h = 400, 80
-    rx = 18
+    w, h = 240, 48
+    rx = 12
     parts = []
     parts.append('<rect x="3" y="3" width="{}" height="{}" rx="{}" fill="{}"/>'.format(w - 6, h - 6, rx, OUTLINE))
-    parts.append('<rect x="7" y="7" width="{}" height="{}" rx="{}" fill="{}"/>'.format(w - 14, h - 14, rx - 4, DARK_SQUARE))
-    parts.append('<rect x="7" y="7" width="{}" height="{}" rx="{}" fill="none" stroke="{}" stroke-width="3"/>'.format(w - 14, h - 14, rx - 4, BLACK_FILL))
+    parts.append('<rect x="6" y="6" width="{}" height="{}" rx="{}" fill="{}"/>'.format(w - 12, h - 12, rx - 3, DARK_SQUARE))
+    parts.append('<rect x="6" y="6" width="{}" height="{}" rx="{}" fill="none" stroke="{}" stroke-width="2"/>'.format(w - 12, h - 12, rx - 3, BLACK_FILL))
     parts.append('<text x="{}" y="{}" text-anchor="middle" dominant-baseline="central" '
-                 'font-family="monospace" font-size="30" font-weight="bold" fill="{}" '
-                 'letter-spacing="3" shape-rendering="auto">&#9823; START NEW GAME</text>'.format(w // 2, h // 2, BLACK_FILL))
+                 'font-family="monospace" font-size="18" font-weight="bold" fill="{}" '
+                 'letter-spacing="2" shape-rendering="auto">&#9823; START NEW GAME</text>'.format(w // 2, h // 2, BLACK_FILL))
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}" '
             'shape-rendering="crispEdges">'.format(w, h) + ''.join(parts) + '</svg>')
 

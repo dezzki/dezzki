@@ -22,6 +22,14 @@ def create_issue_link(source, dest_list):
     ret = [create_link(dest, issue_link.format(source=source, dest=dest)) for dest in sorted(dest_list)]
     return ", ".join(ret)
 
+def new_game_issue_link():
+    return settings['issues']['link'].format(
+        repo=os.environ["GITHUB_REPOSITORY"],
+        params=urlencode(settings['issues']['new_game']))
+
+def start_game_button():
+    return '\n[![Start New Game](img/start-game.svg)](' + new_game_issue_link() + ')\n'
+
 def generate_top_moves():
     with open("data/top_moves.txt", 'r') as file:
         dictionary = ast.literal_eval(file.read())

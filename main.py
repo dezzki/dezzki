@@ -196,6 +196,17 @@ def main(issue, issue_author, repo_owner):
         os.rename('games/current.pgn', datetime.now().strftime('games/game-%Y%m%d-%H%M%S.pgn'))
         os.remove('data/last_moves.txt')
 
+    game_live = os.path.exists('games/current.pgn')
+
+    if game_live:
+        chess_board = markdown.board_to_markdown(gameboard)
+        moves_list = markdown.generate_moves_list(gameboard)
+        turn = 'white' if gameboard.turn == chess.WHITE else 'black'
+    else:
+        chess_board = markdown.start_game_button()
+        moves_list = ''
+        turn = '?'
+
     with open('README.md', 'r') as file:
         readme = file.read()
         readme = replace_text_between(readme, settings['markers']['board'], '{chess_board}')
@@ -207,9 +218,9 @@ def main(issue, issue_author, repo_owner):
     with open('README.md', 'w') as file:
         # Write new board & list of movements
         file.write(readme.format(
-            chess_board=markdown.board_to_markdown(gameboard),
-            moves_list=markdown.generate_moves_list(gameboard),
-            turn=('white' if gameboard.turn == chess.WHITE else 'black'),
+            chess_board=chess_board,
+            moves_list=moves_list,
+            turn=turn,
             last_moves=last_moves,
             top_moves=markdown.generate_top_moves()))
 
