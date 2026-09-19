@@ -86,7 +86,7 @@ and contribute to real-world projects.
 - I'm building and maintaining [0-to-projects](https://github.com/dezzki/0-to-projects) a step-by-step repository of beginner-friendly projects for anyone starting out with programming and automation. Check it out and feel free to contribute
 ---
 
-- 📫 Drop a message or follow my journey here:
+### 📫 Drop a message or follow my journey here:
 
 - 🐦 **X:** [@dezzki_builds](https://x.com/dezzki_builds)
 - 👽 **Reddit:** [u/Dezzki-builds](https://www.reddit.com/user/Dezzki-builds/)
