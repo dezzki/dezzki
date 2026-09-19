@@ -2,7 +2,6 @@ from collections import defaultdict
 from urllib.parse import urlencode
 import os
 import re
-import ast
 
 import chess
 import yaml
@@ -29,20 +28,6 @@ def new_game_issue_link():
 
 def start_game_button():
     return '\n**[♟ Start New Game](' + new_game_issue_link() + ')**\n'
-
-def generate_top_moves():
-    with open("data/top_moves.txt", 'r') as file:
-        dictionary = ast.literal_eval(file.read())
-
-    markdown = "\n"
-    markdown += "| Total moves |  User  |\n"
-    markdown += "| :---------: | :----- |\n"
-
-    max_entries = settings['misc']['max_top_moves']
-    for key,val in sorted(dictionary.items(), key=lambda x: x[1], reverse=True)[:max_entries]:
-        markdown += "| {} | {} |\n".format(val, create_link(key, "https://github.com/" + key[1:]))
-
-    return markdown + "\n"
 
 def generate_last_moves():
     markdown = "\n"

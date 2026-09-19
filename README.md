@@ -18,25 +18,21 @@ Having fun? Ask a friend to do the next move!
 
 #### How it works
 
-When you click on a link and submit a new issue with the desired move, a GitHub action is triggered, which in turn runs a small python script that performs the specified movement, updates this README file and commits the changes.
+Click a link to submit an issue with your move.
 
+A GitHub Action triggers automatically.
+
+A Python script processes the move, updates this README, and commits the result.
 <details>
-  <summary>Last 5 moves in this game</summary>
+  <summary>Last 10 moves in this game</summary>
 <!-- BEGIN LAST MOVES -->
-(Here goes the list of the last 5 moves)
+(Here goes the list of the last 10 moves)
 <!-- END LAST MOVES -->
-</details>
-
-<details>
-  <summary>Top 10 most moves across all games</summary>
-<!-- BEGIN TOP MOVES -->
-(Here goes the top 10 most moves)
-<!-- END TOP MOVES -->
 </details>
 
 ---
 
-Built with [readme-chess](https://github.com/marcizhu/readme-chess)
+inspired by [readme-chess](https://github.com/marcizhu/readme-chess)
 
 ---
 

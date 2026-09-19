@@ -1,7 +1,6 @@
 import re
 import os
 import sys
-import ast
 from enum import Enum
 from datetime import datetime
 
@@ -19,21 +18,6 @@ class Action(Enum):
     UNKNOWN = 0
     MOVE = 1
     NEW_GAME = 2
-
-
-def update_top_moves(user):
-    """Adds the given user to the top moves file"""
-    with open('data/top_moves.txt', 'r') as file:
-        contents = file.read()
-        dictionary = ast.literal_eval(contents)
-
-    if user not in dictionary:
-        dictionary[user] = 1 # First move
-    else:
-        dictionary[user] += 1
-
-    with open('data/top_moves.txt', 'w') as file:
-        file.write(str(dictionary))
 
 
 def update_last_moves(line):
@@ -152,7 +136,6 @@ def main(issue, issue_author, repo_owner):
         issue.edit(state='closed', labels=issue_labels)
 
         update_last_moves(action[1] + ': ' + issue_author)
-        update_top_moves(issue_author)
 
         # Perform move
         gameboard.push(move)
@@ -213,7 +196,6 @@ def main(issue, issue_author, repo_owner):
         readme = replace_text_between(readme, settings['markers']['moves'], '{moves_list}')
         readme = replace_text_between(readme, settings['markers']['turn'], '{turn}')
         readme = replace_text_between(readme, settings['markers']['last_moves'], '{last_moves}')
-        readme = replace_text_between(readme, settings['markers']['top_moves'], '{top_moves}')
 
     with open('README.md', 'w') as file:
         # Write new board & list of movements
@@ -221,8 +203,7 @@ def main(issue, issue_author, repo_owner):
             chess_board=chess_board,
             moves_list=moves_list,
             turn=turn,
-            last_moves=last_moves,
-            top_moves=markdown.generate_top_moves()))
+            last_moves=last_moves))
 
     return True, ''
 

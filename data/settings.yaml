@@ -54,15 +54,10 @@ markers:
   moves:
     begin: "<!-- BEGIN MOVES LIST -->\n"
     end: "<!-- END MOVES LIST -->\n"
-  top_moves:
-    begin: "<!-- BEGIN TOP MOVES -->\n"
-    end: "<!-- END TOP MOVES -->\n"
   turn:
     begin: "<!-- BEGIN TURN -->"
     end: "<!-- END TURN -->"
 
 misc:
   # Maximum number of last moves displayed
-  max_last_moves: 5
-  # Maximum number of top players displayed
-  max_top_moves: 10
+  max_last_moves: 10
