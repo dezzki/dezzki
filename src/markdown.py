@@ -100,7 +100,7 @@ def board_to_markdown(board):
     }
     piece_color = {
         "r": "black", "n": "black", "b": "black", "q": "black", "k": "black", "p": "black",
-        "R": "white", "N": "white", "B": "white", "Q": "white", "K": "white", "P": "white",
+        "R": "gold", "N": "gold", "B": "gold", "Q": "gold", "K": "gold", "P": "gold",
     }
 
     black_turn = board.turn == chess.BLACK

@@ -18,9 +18,7 @@ Having fun? Ask a friend to do the next move!
 
 #### How it works
 
-- Click a link to submit an issue with your move.
-- A GitHub Action triggers automatically.
-- A Python script processes the move, updates this README, and commits the result.
+When you click on a link and submit a new issue with the desired move, a GitHub action is triggered, which in turn runs a small python script that performs the specified movement, updates this README file and commits the changes.
 
 <details>
   <summary>Last 10 moves in this game</summary>
@@ -31,7 +29,7 @@ Having fun? Ask a friend to do the next move!
 
 ---
 
-inspired by [readme-chess](https://github.com/marcizhu/readme-chess)
+inspired by [readme-chess](https://github.com/marcizhu/readme-chess) · chess pieces by [Colin M.L. Burnett](https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces) (CC BY-SA 3.0)
 
 ---
 
