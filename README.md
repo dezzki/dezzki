@@ -18,11 +18,10 @@ Having fun? Ask a friend to do the next move!
 
 #### How it works
 
-Click a link to submit an issue with your move.
+- Click a link to submit an issue with your move.
+- A GitHub Action triggers automatically.
+- A Python script processes the move, updates this README, and commits the result.
 
-A GitHub Action triggers automatically.
-
-A Python script processes the move, updates this README, and commits the result.
 <details>
   <summary>Last 10 moves in this game</summary>
 <!-- BEGIN LAST MOVES -->
