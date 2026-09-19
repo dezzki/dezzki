@@ -53,6 +53,13 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 <!-- END LAST MOVES -->
 </details>
 
+<details>
+  <summary>List of winners</summary>
+<!-- BEGIN WINNERS -->
+_No games finished yet._
+<!-- END WINNERS -->
+</details>
+
 ---
 
 inspired by [readme-chess](https://github.com/marcizhu/readme-chess) · chess pieces by [Colin M.L. Burnett](https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces) (CC BY-SA 3.0)

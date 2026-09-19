@@ -57,6 +57,9 @@ markers:
   turn:
     begin: "<!-- BEGIN TURN -->"
     end: "<!-- END TURN -->"
+  winners:
+    begin: "<!-- BEGIN WINNERS -->\n"
+    end: "<!-- END WINNERS -->\n"
 
 misc:
   # Maximum number of last moves displayed

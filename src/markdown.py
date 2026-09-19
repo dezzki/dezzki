@@ -29,6 +29,26 @@ def new_game_issue_link():
 def start_game_button():
     return '\n**[♟ Start New Game](' + new_game_issue_link() + ')**\n'
 
+def generate_winners():
+    with open("data/winners.txt", 'r') as file:
+        lines = [line.rstrip() for line in file.readlines() if line.strip()]
+
+    if not lines:
+        return '\n_No games finished yet._\n'
+
+    markdown = "\n| Result | Players |\n"
+    markdown += "| :----: | :------ |\n"
+
+    for line in lines:
+        outcome, sep, players = line.partition('|')
+        links = ', '.join(
+            create_link(p.strip(), "https://github.com/" + p.strip().lstrip('@'))
+            for p in players.split(',') if p.strip()
+        )
+        markdown += "| {} | {} |\n".format(outcome, links)
+
+    return markdown + "\n"
+
 def generate_last_moves():
     markdown = "\n"
     markdown += "| Move | Author |\n"

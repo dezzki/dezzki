@@ -176,6 +176,12 @@ def main(issue, issue_author, repo_owner):
             num_moves=len(lines)-1,
             num_players=len(player_list)))
 
+        winner_entry = win_msg.get(gameboard.result(), 'UNKNOWN') + '|' + ', '.join(sorted(player_list)) + '\n'
+        with open('data/winners.txt', 'r') as winners_file:
+            existing = winners_file.read()
+        with open('data/winners.txt', 'w') as winners_file:
+            winners_file.write(winner_entry + existing)
+
         os.rename('games/current.pgn', datetime.now().strftime('games/game-%Y%m%d-%H%M%S.pgn'))
         os.remove('data/last_moves.txt')
 
@@ -190,12 +196,15 @@ def main(issue, issue_author, repo_owner):
         moves_list = ''
         turn = '?'
 
+    winners = markdown.generate_winners()
+
     with open('README.md', 'r') as file:
         readme = file.read()
         readme = replace_text_between(readme, settings['markers']['board'], '{chess_board}')
         readme = replace_text_between(readme, settings['markers']['moves'], '{moves_list}')
         readme = replace_text_between(readme, settings['markers']['turn'], '{turn}')
         readme = replace_text_between(readme, settings['markers']['last_moves'], '{last_moves}')
+        readme = replace_text_between(readme, settings['markers']['winners'], '{winners}')
 
     with open('README.md', 'w') as file:
         # Write new board & list of movements
@@ -203,7 +212,8 @@ def main(issue, issue_author, repo_owner):
             chess_board=chess_board,
             moves_list=moves_list,
             turn=turn,
-            last_moves=last_moves))
+            last_moves=last_moves,
+            winners=winners))
 
     return True, ''
 
